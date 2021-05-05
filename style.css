@@ -1,61 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
 
-
-* {
-  background-color: hsl(257, 40%, 49%);
-  color: #FFF;
+body {
+  background: url(/images/bg-desktop.svg), hsl(257, 40%, 49%);
+  background-repeat: no-repeat;
+  color: #fff;
+  margin: 0;
 }
-
-
-/* body{
-  position: relative;
-  margin: 0 auto;
-  background: url(/images/bg-desktop.svg);
-}
-body:hover::before {
-  position: absolute;
-  background-color: hsl(257, 40%, 49%);
-  opacity: 1;
-} */
-
-
-
-
-
-
-
-
 
 header img {
   max-width: 50%;
-  margin-left: 180px;
+  margin-left: 70px;
   margin-top: 40px;
-
 }
-
 
 .content {
   display: flex;
   justify-content: center;
-  padding: 180px;
-  /* background: url(/images/bg-desktop.svg); */
+  height: 100%;
+  overflow: auto;
+  margin: 80px;
 }
 
 .description {
-  margin-left: 60px;
-  
-
+  margin-left: 100px;
+  margin-right: 200px;
 }
-h1{
-  font-family: 'Poppins', sans-serif;
+h1 {
+  font-family: "Poppins", sans-serif;
   font-size: 51px;
 }
-.description p{
+.description p {
   font-size: 22.5px;
 }
 
-p, .button {
-  font-family: 'Open Sans', sans-serif;
+p,
+.button {
+  font-family: "Open Sans", sans-serif;
 }
 
 .button {
@@ -66,18 +46,49 @@ p, .button {
   border-radius: 30px;
 }
 
-@media (max-width:375px) {
+.button:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
+a,
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  margin-top: 200px;
+}
+@media (max-width: 900px) {
   .content {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin: 50px;
   }
   .description {
-    margin:0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
   }
-  .description .p {
-    background-color: red;
-    color: red;
-    height: 100%;
+  .description p {
+    font-size: 15px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .button {
+    padding: 10px 30px;
+    font-size: 15px;
+  }
+  img {
     width: 100%;
+    height: auto;
+  }
+
+  a,
+  .attribution {
+    margin-top: 40px;
   }
 }
